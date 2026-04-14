@@ -1,12 +1,19 @@
 package org.array.statici;
 
+import java.util.Random;
+
 public class NumeriInteriStatico {
 
     private int[] arrayNumeriInteri;
     private int index = 0;
 
+    // costruttori
     public NumeriInteriStatico(int[] arrayNumeriInteri) {
         this.arrayNumeriInteri = arrayNumeriInteri;
+    }
+
+    public NumeriInteriStatico() {
+        arrayNumeriInteri = new int[0];
     }
 
     // metodi Get e Set
@@ -43,5 +50,16 @@ public class NumeriInteriStatico {
         } else {
             return false;
         }
+
+    }
+
+    public void addElemento() {
+        int[] newArray = new int[this.arrayNumeriInteri.length + 1];
+        Random random = new Random();
+        newArray[this.arrayNumeriInteri.length] = random.nextInt(99);
+        for (int i = 0; i < arrayNumeriInteri.length; i++) {
+            newArray[i] = arrayNumeriInteri[i];
+        }
+        arrayNumeriInteri = newArray;
     }
 }
