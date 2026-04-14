@@ -62,4 +62,13 @@ public class NumeriInteriStatico {
         }
         arrayNumeriInteri = newArray;
     }
+
+    public void addElemento(int nuovoNumeroIntero) {
+        int[] newArray = new int[this.arrayNumeriInteri.length + 1];
+        newArray[this.arrayNumeriInteri.length] = nuovoNumeroIntero;
+        for (int i = 0; i < arrayNumeriInteri.length; i++) {
+            newArray[i] = arrayNumeriInteri[i];
+        }
+        arrayNumeriInteri = newArray;
+    }
 }
