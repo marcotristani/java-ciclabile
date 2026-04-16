@@ -75,4 +75,5 @@ public class NumeriInteriStatico {
     public int getArrayLength() {
         return arrayNumeriInteri.length;
     }
+
 }
